@@ -76,13 +76,13 @@ const URLShortener = () => {
           </div>
           <div className="space-y-6">
             {urls.map((url, index) => (
-              <div key={index} className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+              <div key={index} className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-10 hover:border-blue-300 transition-colors">
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {index + 1}
                     </span>
-                    <span className="text-gray-700 font-medium">URL #{index + 1}</span>
+                    <span className="text-gray-700 font-medium">URL{index + 1}</span>
                   </div>
                   {urls.length > 1 && (
                     <button
@@ -108,7 +108,7 @@ const URLShortener = () => {
                     {errors[`url_${index}`] && <p className="text-red-500 text-sm mt-1">{errors[`url_${index}`]}</p>}
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
                     <div>
                       <label className="block text-sm font-medium mb-2">Validity (minutes)</label>
                       <input
